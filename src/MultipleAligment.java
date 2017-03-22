@@ -23,19 +23,19 @@ public class MultipleAligment {
 			 	fileReader = new FileReader(file);
 				br = new BufferedReader(fileReader);
 				while ((line = br.readLine()) != null) {
-															if(durum)
-															{
-																skor_Matris=line.split(" ");
-																match=Integer.parseInt(skor_Matris[0]);
-																miss=Integer.parseInt(skor_Matris[1]);
-																gap=Integer.parseInt(skor_Matris[2]);
-																durum=false;
-															}
-															else
-															{
-																strings.add(new StringBuilder(line));
-															}
-													   }
+							if(durum)
+							{
+							   skor_Matris=line.split(" ");
+							   match=Integer.parseInt(skor_Matris[0]);
+							   miss=Integer.parseInt(skor_Matris[1]);
+							   gap=Integer.parseInt(skor_Matris[2]);
+							   durum=false;
+							}
+							else
+							{
+							   strings.add(new StringBuilder(line));
+							}
+				}
 			    br.close();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
